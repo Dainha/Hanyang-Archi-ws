@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <style media="screen">
+
+    #box
+    {
+      background-color : #AEAEAE;
+      height : 160px;
+      width : 630px;
+      border : 1px solid white;
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+    }
+
+    #menu
+    {
+      background-color : #08088A;
+      height : 20px;
+      width : 630px;
+      position : absolute;
+      top : 42.8%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      color : white;
+      font-size : 14px;
+    }
+
+    #font
+    {
+      position : absolute;
+      top : 45%;
+      left : 39%;
+      color : black;
+      font-size : 14px;
+    }
+
+    #hint
+    {
+      position : absolute;
+      top : 51%;
+      left : 39%;
+    }
+
+    #pw
+    {
+      position : absolute;
+      top : 54%;
+      left : 39%;
+    }
+
+    #submit
+    {
+      position : absolute;
+      top : 48%;
+      left : 59%;
+      border : 1px solid black;
+    }
+
+    #picture
+    {
+      position : absolute;
+      top : 44%;
+      left : 35%;
+    }
+
+    #gh
+    {
+      position : absolute;
+      top : 51%;
+      left : 83%;
+      opacity : 20%;
+    }
+
+  </style>
+  <meta charset="utf-8">
+  <title>web site</title>
+</head>
+<body bgcolor=#040404>
+  <div id="box">
+
+  </div>
+
+  <div id="menu">
+
+    &nbsp 네트워크 암호 입력
+
+  </div>
+
+  <div id="font">
+    Microsoft 네트워크에 로그온하려면 암호를 입력하세요.
+  </div>
+
+  <div id="picture">
+
+    <img src="com.png">
+
+  </div>
+
+  <div id="gh">
+    <img src="gh.png">
+  </div>
+
+  <form>
+    <div id="hint">
+      힌트&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="hint" placeholder="배열, 복사, 해치, 삽입" size="30">
+    </div>
+    <div id="pw">
+      암호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="password" name="pw" size="30" required id="pw2">
+    </div>
+    <div id="submit">
+      <input type="button" onclick="test()" value="       확인       " name="submit">
+    </div>
+  </form>
+
+  <script type="text/javascript">
+    function test() {
+      var p1 = "archi";
+      var p2 = document.getElementById('pw2').value;
+      if( p1 != p2 ) {
+        alert("비밀번호가 일치 하지 않습니다");
+        return false;
+      } else{
+        alert("비밀번호가 일치합니다");
+        document.write("<img src=\"passbook.jpg\">");
+        document.write("<img src=\"log.jpg\">");
+        return true;
+      }
+
+    }
+  </script>
+
+</body>
+</html>
